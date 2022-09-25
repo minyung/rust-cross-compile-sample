@@ -1,5 +1,5 @@
-# rust-cross-compile-sample
- Supports Android and iOS only.
+# rust-cross-compile-sample 
+ Android, iOS Sample for Rust.
 
 # Android
 ## Development environment
