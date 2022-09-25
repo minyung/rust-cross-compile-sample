@@ -46,6 +46,7 @@ jobs:
 
       - name: Run Tests
         uses: reactivecircus/android-emulator-runner@v2
+        working-directory: android
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
