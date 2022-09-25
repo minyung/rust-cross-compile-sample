@@ -33,13 +33,31 @@ jobs:
       - name: Run Ktlint
         working-directory: android
         run: ./gradlew ktlintCheck
+
+  android_test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        api-level: [24, 29, 32]
+        target: [playstore]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matirx.api-level }}
+          target: ${{ matrix.target }}
+          script: ./gradlew connectedCheck
+
           
   android_build:
+    needs: [check_ktlint, android_test]
+
     runs-on: macos-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       - name: Setup Rust
