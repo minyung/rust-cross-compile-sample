@@ -1,11 +1,14 @@
-use super::utils::Logger;
+extern crate android_logger;
+extern crate jni;
+
+use super::jvm::jni_helper;
 use super::jvm::sdk_class_api::call_get_test_string;
+use super::utils::Logger;
 
-use jni::sys::{jint, JNI_VERSION_1_6, jstring};
+use jni::sys::{jint, jstring, JNI_VERSION_1_6};
 use jni::{JNIEnv, JavaVM, NativeMethod};
-
+use jni::objects::{JClass, JString};
 use std::os::raw::c_void;
-use jni::objects::{JString, JClass};
 
 fn get_class_name() -> String {
     "com/minyung/android/mylibrary/RustLib$Companion".to_string()
@@ -22,7 +25,7 @@ fn get_native_methods() -> [NativeMethod; 2] {
             name: "getHelloString".into(),
             sig: "(Ljava/lang/String;I)Ljava/lang/String;".into(),
             fn_ptr: get_hello_string as *mut c_void,
-        }
+        },
     ]
 }
 
@@ -31,9 +34,14 @@ fn print_test_log() {
 }
 
 fn get_hello_string(env: JNIEnv, _class: JClass, name: JString, number: jint) -> jstring {
-    let name: String = env.get_string(name).unwrap().into();
+    let name: String = match jni_helper::get_string(env, name) {
+        Ok(value) => value.into(),
+        Err(err) => {
+            error!("{:?}", err);
+            panic!("")
+        }
+    };
     let output = format!("Hello, {} {}", name, number);
-
     env.new_string(output).unwrap().into_inner()
 }
 
@@ -48,8 +56,8 @@ pub extern "system" fn JNI_OnLoad(vm: JavaVM, _: *mut c_void) -> jint {
     register_methods(env);
 
     let result = match call_get_test_string(env) {
-        Some(value) => value,
-        None => "failed".to_string()
+        Ok(value) => value,
+        Err(err) => format!("{:?}", err),
     };
     info!("call_get_test_string: {}", result);
 
