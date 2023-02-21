@@ -49,6 +49,9 @@ cargo {
     module = "../../rust"
     libname = "rustlib"
     targets = listOf("arm", "arm64", "x86", "x86_64")
+    features {
+        defaultAnd(arrayOf("android"))
+    }
 }
 tasks.whenTaskAdded {
     if ((name == "javaPreCompileDebug") || (name == "javaPreCompileRelease")) {

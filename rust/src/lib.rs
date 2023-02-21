@@ -3,5 +3,5 @@
 extern crate log;
 extern crate core;
 
-#[cfg(target_os = "android")]
+#[cfg(feature = "android")]
 mod android;
