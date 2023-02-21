@@ -29,6 +29,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '16'
+          cache: 'gradle'
 
       - name: Run Ktlint
         working-directory: android
@@ -58,6 +59,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '16'
+          cache: 'gradle'
 
       - name: Run Tests
         uses: reactivecircus/android-emulator-runner@v2
@@ -90,6 +92,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '16'
+          cache: 'gradle'
           
       - name: Run Build
         working-directory: android
