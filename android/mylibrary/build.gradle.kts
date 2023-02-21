@@ -38,7 +38,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    ndkVersion = "25.1.8937393"
+    ndkVersion = "25.2.9519653"
 }
 
 cargo {
