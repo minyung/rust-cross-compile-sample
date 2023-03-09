@@ -38,7 +38,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    ndkVersion = "25.1.8937393"
+    ndkVersion = "25.2.9519653"
 }
 
 cargo {
@@ -49,6 +49,9 @@ cargo {
     module = "../../rust"
     libname = "rustlib"
     targets = listOf("arm", "arm64", "x86", "x86_64")
+    features {
+        defaultAnd(arrayOf("android"))
+    }
 }
 tasks.whenTaskAdded {
     if ((name == "javaPreCompileDebug") || (name == "javaPreCompileRelease")) {
