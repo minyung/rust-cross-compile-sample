@@ -5,3 +5,6 @@ extern crate core;
 
 #[cfg(feature = "android")]
 mod android;
+
+#[cfg(feature = "ios")]
+mod ios;
