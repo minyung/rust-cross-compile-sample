@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC10B11628F31BFB008F3334 /* myframework.docc in Sources */ = {isa = PBXBuildFile; fileRef = CC10B11528F31BFB008F3334 /* myframework.docc */; };
+		CC10B11C28F31BFB008F3334 /* myframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC10B11128F31BFB008F3334 /* myframework.framework */; };
+		CC10B12128F31BFB008F3334 /* myframeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10B12028F31BFB008F3334 /* myframeworkTests.swift */; };
+		CC10B12228F31BFB008F3334 /* myframework.h in Headers */ = {isa = PBXBuildFile; fileRef = CC10B11428F31BFB008F3334 /* myframework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC10B13528F31CA0008F3334 /* RustLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10B13428F31CA0008F3334 /* RustLib.swift */; };
+		CC10B13B28F31D52008F3334 /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = CC10B13A28F31D52008F3334 /* build.sh */; };
+		CC10B13C28F31D52008F3334 /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = CC10B13A28F31D52008F3334 /* build.sh */; };
+		CC10B14028F321C5008F3334 /* rust.h in Headers */ = {isa = PBXBuildFile; fileRef = CC10B13F28F321C5008F3334 /* rust.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCD7791C29C88E4700D24360 /* librustlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD7791B29C88E4700D24360 /* librustlib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC10B11D28F31BFB008F3334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC10B10828F31BFB008F3334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC10B11028F31BFB008F3334;
+			remoteInfo = myframework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC10B11128F31BFB008F3334 /* myframework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = myframework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC10B11428F31BFB008F3334 /* myframework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myframework.h; sourceTree = "<group>"; };
+		CC10B11528F31BFB008F3334 /* myframework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = myframework.docc; sourceTree = "<group>"; };
+		CC10B11B28F31BFB008F3334 /* myframeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myframeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC10B12028F31BFB008F3334 /* myframeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myframeworkTests.swift; sourceTree = "<group>"; };
+		CC10B13428F31CA0008F3334 /* RustLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustLib.swift; sourceTree = "<group>"; };
+		CC10B13A28F31D52008F3334 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		CC10B13F28F321C5008F3334 /* rust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rust.h; sourceTree = "<group>"; };
+		CCD7791B29C88E4700D24360 /* librustlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librustlib.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC10B10E28F31BFB008F3334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD7791C29C88E4700D24360 /* librustlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC10B11828F31BFB008F3334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B11C28F31BFB008F3334 /* myframework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC10B10728F31BFB008F3334 = {
+			isa = PBXGroup;
+			children = (
+				CC10B13E28F3202D008F3334 /* librust */,
+				CC10B13A28F31D52008F3334 /* build.sh */,
+				CC10B11328F31BFB008F3334 /* myframework */,
+				CC10B11F28F31BFB008F3334 /* myframeworkTests */,
+				CC10B11228F31BFB008F3334 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC10B11228F31BFB008F3334 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC10B11128F31BFB008F3334 /* myframework.framework */,
+				CC10B11B28F31BFB008F3334 /* myframeworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC10B11328F31BFB008F3334 /* myframework */ = {
+			isa = PBXGroup;
+			children = (
+				CC10B11428F31BFB008F3334 /* myframework.h */,
+				CC10B11528F31BFB008F3334 /* myframework.docc */,
+				CC10B13428F31CA0008F3334 /* RustLib.swift */,
+			);
+			path = myframework;
+			sourceTree = "<group>";
+		};
+		CC10B11F28F31BFB008F3334 /* myframeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC10B12028F31BFB008F3334 /* myframeworkTests.swift */,
+			);
+			path = myframeworkTests;
+			sourceTree = "<group>";
+		};
+		CC10B13E28F3202D008F3334 /* librust */ = {
+			isa = PBXGroup;
+			children = (
+				CCD7791B29C88E4700D24360 /* librustlib.a */,
+				CC10B13F28F321C5008F3334 /* rust.h */,
+			);
+			path = librust;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC10B10C28F31BFB008F3334 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B14028F321C5008F3334 /* rust.h in Headers */,
+				CC10B12228F31BFB008F3334 /* myframework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CC10B11028F31BFB008F3334 /* myframework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC10B12528F31BFB008F3334 /* Build configuration list for PBXNativeTarget "myframework" */;
+			buildPhases = (
+				CC10B13D28F31F84008F3334 /* ShellScript */,
+				CC10B10C28F31BFB008F3334 /* Headers */,
+				CC10B10D28F31BFB008F3334 /* Sources */,
+				CC10B10E28F31BFB008F3334 /* Frameworks */,
+				CC10B10F28F31BFB008F3334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myframework;
+			productName = myframework;
+			productReference = CC10B11128F31BFB008F3334 /* myframework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC10B11A28F31BFB008F3334 /* myframeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC10B12828F31BFB008F3334 /* Build configuration list for PBXNativeTarget "myframeworkTests" */;
+			buildPhases = (
+				CC10B11728F31BFB008F3334 /* Sources */,
+				CC10B11828F31BFB008F3334 /* Frameworks */,
+				CC10B11928F31BFB008F3334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC10B11E28F31BFB008F3334 /* PBXTargetDependency */,
+			);
+			name = myframeworkTests;
+			productName = myframeworkTests;
+			productReference = CC10B11B28F31BFB008F3334 /* myframeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC10B10828F31BFB008F3334 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CC10B11028F31BFB008F3334 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CC10B11A28F31BFB008F3334 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CC10B10B28F31BFB008F3334 /* Build configuration list for PBXProject "myframework" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC10B10728F31BFB008F3334;
+			productRefGroup = CC10B11228F31BFB008F3334 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC10B11028F31BFB008F3334 /* myframework */,
+				CC10B11A28F31BFB008F3334 /* myframeworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC10B10F28F31BFB008F3334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B13B28F31D52008F3334 /* build.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC10B11928F31BFB008F3334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B13C28F31D52008F3334 /* build.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC10B13D28F31F84008F3334 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset -e\nSHELL_SCRIPT=\"$PROJECT_DIR/build.sh\"\n\necho \"Run Script path: $SHELL_SCRIPT\"\nsh $SHELL_SCRIPT\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC10B10D28F31BFB008F3334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B11628F31BFB008F3334 /* myframework.docc in Sources */,
+				CC10B13528F31CA0008F3334 /* RustLib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC10B11728F31BFB008F3334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC10B12128F31BFB008F3334 /* myframeworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC10B11E28F31BFB008F3334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC10B11028F31BFB008F3334 /* myframework */;
+			targetProxy = CC10B11D28F31BFB008F3334 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC10B12328F31BFB008F3334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC10B12428F31BFB008F3334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC10B12628F31BFB008F3334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					DEFINE_RUST_IOS,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/librust",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyung.myframework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC10B12728F31BFB008F3334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = DEFINE_RUST_IOS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/librust",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyung.myframework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC10B12928F31BFB008F3334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyung.myframeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC10B12A28F31BFB008F3334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.minyung.myframeworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC10B10B28F31BFB008F3334 /* Build configuration list for PBXProject "myframework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC10B12328F31BFB008F3334 /* Debug */,
+				CC10B12428F31BFB008F3334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC10B12528F31BFB008F3334 /* Build configuration list for PBXNativeTarget "myframework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC10B12628F31BFB008F3334 /* Debug */,
+				CC10B12728F31BFB008F3334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC10B12828F31BFB008F3334 /* Build configuration list for PBXNativeTarget "myframeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC10B12928F31BFB008F3334 /* Debug */,
+				CC10B12A28F31BFB008F3334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC10B10828F31BFB008F3334 /* Project object */;
+}

@@ -14,3 +14,13 @@ $ rustup target add aarch64-linux-android
 $ rustup target add i686-linux-android
 $ rustup target add x86_64-linux-android
 ```
+
+# iOS
+## Development environment
+- Xcode 13.4.1
+- [swiftlint](https://github.com/realm/SwiftLint)
+```
+$ rustup target add aarch64-apple-ios
+$ rustup target add x86_64-apple-ios
+$ rustup target add aarch64-apple-ios-sim
+```

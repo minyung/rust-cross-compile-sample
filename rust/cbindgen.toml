@@ -1,0 +1,7 @@
+include_guard = "SDK_RUST_H"
+no_includes = true
+tab_width = 4
+
+[defines]
+"feature = android" = "DEFINE_RUST_ANDROID"
+"feature = ios" = "DEFINE_RUST_IOS"
