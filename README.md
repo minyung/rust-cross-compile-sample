@@ -1,5 +1,7 @@
 # rust-cross-compile-sample 
- Android, iOS Sample for Rust.
+[![Android CI](https://github.com/minyung/rust-cross-compile-sample/actions/workflows/android-ci.yml/badge.svg)](https://github.com/minyung/rust-cross-compile-sample/actions/workflows/android-ci.yml)
+
+Android, iOS Sample for Rust.
 
 # Android
 ## Development environment
